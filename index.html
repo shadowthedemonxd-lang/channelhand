@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Channelhand — the helper for AI-run YouTube channels</title>
+  <meta name="description" content="Channelhand lets AI creators upload, edit and check their own YouTube videos by asking an assistant in chat. It runs on your own computer and uses YouTube API Services.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="./" aria-label="Channelhand home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="currentColor"/><path d="M9 22.5V9.5h3.2v5.1h7.6V9.5H23v13h-3.2v-5.2h-7.6v5.2z" fill="var(--paper)"/><circle cx="23.5" cy="23.5" r="3" fill="var(--accent)"/></svg>
+        Channelhand
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#what">What it does</a>
+        <a href="#how">How it works</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Channelhand · early access</p>
+          <h1>The helper behind <em>AI&#8209;run</em> YouTube channels.</h1>
+          <p class="lede">Say “upload this video” in chat. Channelhand puts it on your channel, fixes the title and tells you how it did — straight from your own computer.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#how">See how it works</a>
+            <a class="text-link" href="privacy.html">Read the Privacy Policy</a>
+          </div>
+        </div>
+
+        <figure class="session" aria-label="Example chat session with Channelhand">
+          <figcaption class="session-bar"><span>example session</span><span>illustrative</span></figcaption>
+          <ol>
+            <li><span class="who">you</span><span>upload <span class="dim">renders/</span>episode-12.mp4 as “The Last Signal”, unlisted</span></li>
+            <li><span class="who bot">hand</span><span><span class="tool">upload_video</span> <span class="bar" aria-hidden="true"></span>done<br><span class="dim">youtu.be/… · unlisted</span></span></li>
+            <li><span class="who">you</span><span>add “part 2” to the title</span></li>
+            <li><span class="who bot">hand</span><span><span class="tool">update_video</span> title changed</span></li>
+            <li><span class="who">you</span><span>how did last week go?</span></li>
+            <li><span class="who bot">hand</span><span><span class="tool">get_analytics</span> <span class="dim">last 7 days</span><br>views, watch time and subscribers, per video</span></li>
+          </ol>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="what" aria-labelledby="what-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="what-title">Four things, <em>done well.</em></h2>
+          <p>Channelhand is a small tool that an AI assistant can call on your behalf. It only touches the channels you sign in with, and only when you ask.</p>
+        </div>
+        <ol class="tools">
+          <li><span class="n">01</span><h3>Upload <span class="mono">upload_video</span></h3><p>Sends a finished video from your computer to your channel with its title, description, tags, privacy and an optional thumbnail. Large files resume if the connection drops.</p></li>
+          <li><span class="n">02</span><h3>Edit <span class="mono">update_video</span></h3><p>Changes the title, description, tags, category or privacy of a video you already published. Anything you don't mention stays as it was.</p></li>
+          <li><span class="n">03</span><h3>List <span class="mono">list_my_videos</span></h3><p>Shows your latest uploads with their privacy, views, likes and comments, so the assistant knows what is already live.</p></li>
+          <li><span class="n">04</span><h3>Measure <span class="mono">get_analytics</span></h3><p>Reads your own channel's views, watch time and subscribers for any date range — overall, by day or by video.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title">How it works</h2>
+          <p>Nothing runs on our servers, because there are none. Channelhand is a program on your own computer that your AI assistant talks to.</p>
+        </div>
+        <ol class="steps">
+          <li><h3>Runs on your computer</h3><p>Channelhand is installed next to your AI assistant (for example Claude) as a local tool. Your videos never pass through anyone else's servers on the way to YouTube.</p></li>
+          <li><h3>You sign in with Google</h3><p>You connect each channel once through Google's own sign-in page. Channelhand never sees your password, and you can remove its access at any time.</p></li>
+          <li><h3>You ask, it acts</h3><p>Tell your assistant what you want in plain words. It calls Channelhand, which talks to YouTube API Services and reports back what happened.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section data" aria-labelledby="data-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="data-title">Your data stays <em>yours.</em></h2>
+          <p>The short version of our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Stored only on your computer</dt><dd>The sign-in token is saved in a file on your own machine. We keep no copy.</dd></div>
+          <div><dt>No tracking</dt><dd>This website and the tool use no cookies, ads or analytics.</dd></div>
+          <div><dt>Only your channels</dt><dd>Channelhand reads and changes only the channels you signed in with.</dd></div>
+          <div><dt>Leave any time</dt><dd>Revoke access in your <a href="https://myaccount.google.com/permissions">Google Account permissions</a> and delete the token file.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="yt">
+        <svg viewBox="0 0 28 20" role="img" aria-label="YouTube"><rect width="28" height="20" rx="5" fill="var(--yt-red)"/><path d="M11 5.8v8.4l7.2-4.2z" fill="#fff"/></svg>
+        <p>Channelhand uses YouTube API Services. By using it you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and your data is also handled under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. YouTube is a trademark of Google LLC; Channelhand is not made or endorsed by YouTube or Google.</p>
+      </div>
+      <div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="mailto:sdschosenone@gmail.com">Contact</a>
+        </nav>
+        <p class="small copy">© 2026 Channelhand</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
